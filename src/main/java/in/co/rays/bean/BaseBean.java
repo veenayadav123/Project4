@@ -3,7 +3,7 @@ package in.co.rays.bean;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
-public class BaseBean implements DropdownListBean,Serializable,Comparable<BaseBean> {
+public abstract class BaseBean implements DropdownListBean, Serializable, Comparable<BaseBean> {
 
 	protected long id;
 	private String createdBy;
@@ -51,21 +51,11 @@ public class BaseBean implements DropdownListBean,Serializable,Comparable<BaseBe
 		this.modifiedDatetime = modifiedDatetime;
 	}
 
-	@Override
-	public String getKey() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String getValue() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public int compareTo(BaseBean next) {
 		// TODO Auto-generated method stub
 		return getValue().compareTo(next.getValue());
 	}
+
+	
+	
 }
